@@ -1,5 +1,5 @@
 {
-  "documentationUrl": "https://docs.airbyte.com/integrations/destinations/elasticsearch",
+  "documentationUrl": "https://docs.airbyte.com/integrations/destinations/opensearch",
   "supportsIncremental": true,
   "supportsNormalization": false,
   "supportsNamespaces": true,
@@ -7,7 +7,7 @@
   "supported_destination_sync_modes": ["overwrite", "append"],
   "connectionSpecification": {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Elasticsearch Connection Configuration",
+    "title": "OpenSearch Connection Configuration",
     "type": "object",
     "required": ["endpoint"],
     "additionalProperties": false,
@@ -15,12 +15,12 @@
       "endpoint": {
         "title": "Server Endpoint",
         "type": "string",
-        "description": "The full url of the Elasticsearch server"
+        "description": "The full url of the opensearch server"
       },
       "upsert": {
         "type": "boolean",
         "title": "Upsert Records",
-        "description": "If a primary key identifier is defined in the source, an upsert will be performed using the primary key value as the elasticsearch doc id. Does not support composite primary keys.",
+        "description": "If a primary key identifier is defined in the source, an upsert will be performed using the primary key value as the opensearch doc id. Does not support composite primary keys.",
         "default": true
       },
       "ca_certificate": {
@@ -59,7 +59,7 @@
               },
               "apiKeyId": {
                 "title": "API Key ID",
-                "description": "The Key ID to used when accessing an enterprise Elasticsearch instance.",
+                "description": "The Key ID to used when accessing an enterprise opensearch instance.",
                 "type": "string"
               },
               "apiKeySecret": {
@@ -82,12 +82,12 @@
               },
               "username": {
                 "title": "Username",
-                "description": "Basic auth username to access a secure Elasticsearch server",
+                "description": "Basic auth username to access a secure opensearch server",
                 "type": "string"
               },
               "password": {
                 "title": "Password",
-                "description": "Basic auth password to access a secure Elasticsearch server",
+                "description": "Basic auth password to access a secure opensearch server",
                 "type": "string",
                 "airbyte_secret": true
               }
